@@ -10,4 +10,5 @@ app_name = "artist"
 
 urlpatterns = [
     path("list/", views.ListArtists.as_view(), name="artist-list"),
+    path("<int:pk>/like", views.ArtistLikeView.as_view(), name="artist-like")
 ]
